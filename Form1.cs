@@ -22,7 +22,6 @@ namespace EsGDi
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            // Crea un oggetto Brush di colore nero
             Brush b = Brushes.Black;
             decimal x;
             decimal y;
