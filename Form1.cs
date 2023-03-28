@@ -22,6 +22,7 @@ namespace EsGDi
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+
             Brush b = Brushes.Black;
             decimal x;
             decimal y;
