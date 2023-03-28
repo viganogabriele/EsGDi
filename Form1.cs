@@ -22,20 +22,20 @@ namespace EsGDi
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            
-                // Crea un oggetto Brush di colore nero
-                Brush b = Brushes.Black;
+            // Crea un oggetto Brush di colore nero
+            Brush b = Brushes.Black;
+            decimal x;
+            decimal y;
+            for (int i = 0; i < 5; i++)
+            {
+                for (float j = 0; j < Math.PI*2; j = j+ (float)0.1)
+                {
+                    x = Convert.ToDecimal(j * 100 + i*626);
+                    y = Convert.ToDecimal(Math.Sin(j) * 100 + 500);
+                    e.Graphics.FillEllipse(b, new Rectangle((int)x, (int)y, 2, 2));
+                }
 
-                // Riempie il punto alle coordinate (20, 10) con un raggio di 5 pixel
-                e.Graphics.FillEllipse(b, new Rectangle(int.Parse(Math.Cos(3,14 /2)), int.Parse(Math.Sin(3,14 / 2), 5, 5)));
+            }
         }
-
-        /*
-                // Crea un oggetto Pen di colore nero
-                Pen p = new Pen(Color.Black);
-
-                // Disegna un punto alle coordinate (20, 10)
-                e.Graphics.DrawEllipse(p, new Rectangle(20, 10, 1, 1));
-        */
     }
 }
